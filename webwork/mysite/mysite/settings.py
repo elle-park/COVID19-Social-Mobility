@@ -179,7 +179,9 @@ INSTALLED_APPS = [
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'mysite'
+    'mysite',
+    'polls',
+    'polls_cms_integration'
 ]
 
 LANGUAGES = (

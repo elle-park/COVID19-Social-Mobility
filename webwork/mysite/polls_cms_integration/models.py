@@ -2,7 +2,7 @@ from django.db import models
 from cms.models import CMSPlugin
 from polls.models import Poll
 
-# create models here 
+# create models here
 class PollPluginModel(CMSPlugin):
     poll = models.ForeignKey(Poll, on_delete=models.CASCADE)
 

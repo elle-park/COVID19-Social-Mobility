@@ -25,7 +25,7 @@ six
 pytz
 
 gunicorn==20.0.4
-polls==0.0.4
+polls
 sqlparse==0.3.1
 tzlocal==2.1
 Unidecode==1.1.1

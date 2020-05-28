@@ -1,4 +1,5 @@
 import csv
+import json
 import pandas as pd
 
 # Import the SMIData.csv data: smi
@@ -10,7 +11,7 @@ import pandas as pd
 data = pd.read_csv("SMIData.csv")
 dict_of_lists = {}
 
-# extract data's column as dict
+# extract data's column as dictionary
 for col_name in data.columns:
     temp = data[col_name].tolist()
     dict_of_lists[col_name] = temp
@@ -20,3 +21,10 @@ with open('output.csv', 'w', newline="") as csv_file:
     writer = csv.writer(csv_file)
     for key, value in dict_of_lists.items():
        writer.writerow([key, value])
+
+# Serializing json
+json_object = json.dumps(dict_of_lists, indent = 4)
+
+# Writing to sample.json
+with open("output.json", "w") as outfile:
+    outfile.write(json_object)

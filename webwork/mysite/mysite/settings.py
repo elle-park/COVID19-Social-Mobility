@@ -181,6 +181,7 @@ INSTALLED_APPS = [
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
+    'rest_framework',
     'mysite',
     'polls_cms_integration',
     'polls'

@@ -1,6 +1,6 @@
 from django.db import models
 from cms.models import CMSPlugin
-from polls.models import Poll
+from polls.models import Poll 
 
 # create models here
 class PollPluginModel(CMSPlugin):

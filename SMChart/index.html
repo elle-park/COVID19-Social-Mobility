@@ -3,16 +3,26 @@
   <head>
     <title>Social Mobility Index</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
+
   <body>
     <div class="wrapper">
       <h1>Social Mobility Index</h1>
       <h2>The Twitter Social Mobility Index is a measure of social distancing and travel derived from Twitter data. We use public geolocated Twitter data to measure how much a user travels in a given week. We compute the standard deviation of Twitter geolocated tweets per week, and aggregate the data over an entire population to produce a metric for the US as a whole and for individual states and cities. </h2>
+      <div>
+        <canvas id="myChart" width="1600" height="900"></canvas>
+      </div>
 
-      <canvas id="myChart" width="1600" height="900"></canvas>
+      <div>
+			  Alaska <input type='checkbox' value="Alaska"/>
+			  Alabama <input type='checkbox' value="Alaska"/>
+			  Arkansas <input type='checkbox'value="Arkansas"/>
+			  Arizona <input type='checkbox' value="Arizona"/>
+			</div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
   </body>
 </html>

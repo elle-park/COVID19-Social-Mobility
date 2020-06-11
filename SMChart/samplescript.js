@@ -45,9 +45,9 @@ window.onload = function() {
           {
             type: "line",
             mode: "horizontal",
-            scaleID: "y-axis-0",
+            scaleID: "x-axis-0",
             value: 60,
-            borderWidth: 30,
+            borderWidth: 10,
             borderColor: "red",
             label: {
               content: "TODAY",

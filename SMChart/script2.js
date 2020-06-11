@@ -18,7 +18,7 @@ var annotate = impdates.map(function(date, index) {
       scaleID: 'x-axis-0',
       value: date,
       borderColor: 'green',
-      borderWidth: 50,
+      borderWidth: 10,
       label: {
          enabled: true,
          position: "center",

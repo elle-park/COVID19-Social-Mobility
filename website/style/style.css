@@ -1,13 +1,12 @@
 body {
   padding: 0;
-  background: #faf9ef;
+  background: white;
   font-family: Helvetica Neue, Arial, sans-serif;
   text-align: center;
 }
 /*--- navigation bar ---*/
 .navbar {
   background:#faf9ef;
-  border-bottom: 3px solid transparent;
 }
 .nav-link,
 .navbar-brand {
@@ -16,6 +15,7 @@ body {
 }
 .nav-link {
   margin-right: 1em !important;
+  border-bottom: 3px solid transparent
 }
 .nav-link:hover {
   color: #9b1c1c;
@@ -39,6 +39,12 @@ body {
   font-size: 1.3rem;
   line-height: 1.5;
 }
+
+.wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
 .textbody{
   top: 10%;
   left: 10%;
@@ -51,7 +57,7 @@ body {
   background-color: #9b1c1c;
   color: #faf9ef;
   padding: 20px 0 10px;
-  position: fixed;
+
   width: 100%;
   bottom: 0;
   left: 0;

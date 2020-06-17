@@ -11,7 +11,7 @@ for col_name in data.columns:
     dict_of_lists[col_name] = temp
 
 # write output to csv file with rows of col
-with open('output.csv', 'w', newline="") as csv_file:
+with open('output-state.csv', 'w', newline="") as csv_file:
     writer = csv.writer(csv_file)
     for key, value in dict_of_lists.items():
        writer.writerow([key, value])
@@ -20,5 +20,5 @@ with open('output.csv', 'w', newline="") as csv_file:
 json_object = json.dumps(dict_of_lists, indent = 4)
 
 # Writing to output.json
-with open("output.json", "w") as outfile:
+with open("output-state.json", "w") as outfile:
     outfile.write(json_object)

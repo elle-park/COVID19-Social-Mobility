@@ -3,7 +3,7 @@ import json
 import numpy as np
 import pandas as pd
 
-data = pd.read_csv("SMI-State-Data.csv")
+data = pd.read_csv("SMI-City-Data.csv")
 dict_of_lists = {}
 
 df = pd.DataFrame(data)
@@ -23,10 +23,3 @@ with open('output-city.csv', 'w', newline="") as csv_file:
     writer = csv.writer(csv_file)
     for key, value in dict_of_lists.items():
        writer.writerow([key, value])
-
-# Serializing JSON data
-json_object = json.dumps(dict_of_lists, indent = 4)
-
-# Writing to output.json
-with open("output-city.json", "w") as outfile:
-    outfile.write(json_object)

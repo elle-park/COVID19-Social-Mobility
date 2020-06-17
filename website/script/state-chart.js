@@ -26,8 +26,8 @@ var annotate = impdates.map(function(date, index) {
    }
 });
 
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
+var ctx = document.getElementById("stateChart");
+var stateChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: dates,

@@ -12,7 +12,7 @@
 <body>
 
   <nav class="navbar navbar-expand-md navbar-fixed-top">
-    <a class="navbar-brand" href="#">Logo</a>
+    <a class="navbar-brand" href="covid19dataresources.org">COVID-19 Data Resources</a>
     <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,34 +45,44 @@
   </header>
 -->
   <div class="wrapper">
-    <h1>Social Mobility Reduction Data</h1>
-    <p>We release the raw numbers behind our analysis. For each data release we will post two files:</p>
 
     <div class="row">
       <div class="column1">
+        <h1>Social Mobility Reduction Data</h1>
+        <p>We release the raw numbers behind our analysis. For each data release we will post two files:</p>
+
         <h2>Excel/CSV containing measurements by US state</h2>
         <p>This file contains the current social mobility index for each US state and territory. The columns are:
         <ul class="datalist">
-          <li>`location` The US state or territory and the US as a whole. We include some cities and will add new ones over time.</li>
-          <li>`mobility_before_distancing`	The social mobility index for the entire time period of the dataset, from January 1, 2019 up to the date before social distancing, March 15, 2020.</li>
-          <li>`mobility_after_distancing` The social mobility index since March 16, 2020. Note that social distancing started at different times for different states, but we don't include that analysis in this data.</li>
-          <li>`reduction` The percent reduction of social mobility. This is computed as 1 - `mobility_after_distancing` / `mobility_before_distancing`.</li>
-          <li>`num_users` The number of unique Twitter users that were used to compute this row.</li>
-          <li>`num_records` The number of unique tweets used to compute this row.</li>
+          <li><span class="variable">location</span> The US state or territory and the US as a whole. We include some cities and will add new ones over time.</li>
+          <li><span class="variable">mobility_before_distancing</span>	The social mobility index for the entire time period of the dataset, from January 1, 2019 up to the date before social distancing, March 15, 2020.</li>
+          <li><span class="variable">mobility_after_distancing</span> The social mobility index since March 16, 2020. Note that social distancing started at different times for different states, but we don't include that analysis in this data.</li>
+          <li><span class="variable">reduction</span> The percent reduction of social mobility. This is computed as <br><span class="variable">1 - mobility_after_distancing / mobility_before_distancing</span>.</li>
+          <li><span class="variable">num_users</span> The number of unique Twitter users that were used to compute this row.</li>
+          <li><span class="variable">num_records</span> The number of unique tweets used to compute this row.</li>
         </ul>
         </p>
 
         <h2>Longitudinal data with weekly measurements by US state</h2>
         <p>This file contains the social mobility index for every location for each week starting in January 1, 2019.</p>
       </div>
+
       <div class="column2">
-        <h2>Download</h2>
-        <h3>Paper</h3>
-        <p><a href="https://arxiv.org/abs/2004.02397" target="_blank">The Twitter Social Mobility Index: <br>Measuring Social Distancing Practices <br>from Geolocated Tweets</a></p>
-        <h3>Data Files</h3>
+        <h3>Download</h3>
+        <h4>Paper</h4>
+        <p><a href="https://arxiv.org/abs/2004.02397" target="_blank">The Twitter Social Mobility Index: <br>Measuring Social Distancing Practices from Geolocated Tweets</a></p>
+
+        <h4>Data Files</h4>
         <h4>3/20/2020</h4>
         <p><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.state_data.20200330.csv">smi_state_data.csv</a>
         <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.20200330.csv">smi_longitudinal_data.csv</a></p>
+        <h4>4/27/2020</h4>
+        <p><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.state_data.20200427.csv">smi_state_data.csv</a>
+        <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.state.20200427.csv">smi_longitudinal_data.csv</a></p>
+        <p>Mobility data for 100 most <br>populous cities in the US:
+        <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.city_data.20200427.csv">smi_city_data.csv</a>
+        <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.city.20200427.csv">smi_longitudinal_city_data.csv</a></p>
+
       </div>
     </div>
   </div>

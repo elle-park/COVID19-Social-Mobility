@@ -24,21 +24,6 @@ body {
 .navbar-collapse {
   justify-content: flex-end;
 }
-.description {
-  left: 50%;
-  position: absolute;
-  top: 45%;
-  transform: translate(-50%, -55%);
-  text-align: center;
-}
-.description h1 {
-  color: black;
-}
-.description p {
-  color: black;
-  font-size: 1.3rem;
-  line-height: 1.5;
-}
 
 .wrapper {
   max-width: 1000px;
@@ -53,6 +38,8 @@ body {
   text-align: center;
   margin-bottom: 250px;
 }
+
+/*--- footer ---*/
 .page-footer {
   background-color: #9b1c1c;
   color: #faf9ef;
@@ -60,6 +47,13 @@ body {
   width: 100%;
   bottom: 0;
   left: 0;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
 }
 .footer-copyright {
   color: #d4867e;
@@ -79,14 +73,17 @@ body {
 /* Create columns that floats next to each other */
 .column1 {
   float: left;
-  width: 65%;
+  width: 70%;
   padding: 10px;
-  border-right: 3px solid black;
+  text-align: left;
+  margin-right: 10px;
 }
 .column2 {
+  top: 10%;
   float: right;
-  width: 35%;
+  width: 29%;
   padding: 10px;
+  border: 3px solid black;
 }
 /* Clear floats after the columns */
 .row:after {
@@ -95,19 +92,29 @@ body {
   clear: both;
 }
 
-ul.datalist {
-  list-style-position: inside;
-  text-align: left;
-}
-
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column1 {
-    width: 100%;
-    border-right: 3px solid transparent;
-    border-bottom: 3px solid black;
+  .row {
+    flex-direction: column-reverse;
   }
-  .column2 {
+  .column2, .column1 {
     width: 100%;
   }
+}
+
+/* bullet point css */
+ul.datalist {
+  list-style-position: outside;
+  text-align: left;
+}
+.variable {
+  font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+  color:#9b1c1c;
+  background: #ffe6e6;
+  font-weight:bold;
+  font-style:italic;
+}
+.biblio {
+  text-align: left;
+  margin-bottom: 250px;
 }

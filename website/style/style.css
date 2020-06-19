@@ -21,6 +21,11 @@ body {
   color: #9b1c1c;
   border-bottom: 3px solid #9b1c1c;
 }
+.nav-link:hover {
+  color: #9b1c1c;
+  background:#faf9ef;
+  border-bottom: 3px solid #9b1c1c;
+}
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -28,6 +33,10 @@ body {
 .wrapper {
   max-width: 1000px;
   margin: 50px auto;
+}
+.wrapper2 {
+  max-width: 800px;
+  margin: 10px auto;
 }
 
 .textbody{
@@ -121,4 +130,15 @@ ul.datalist {
 .biblio {
   text-align: left;
   margin-bottom: 250px;
+}
+a {
+    color: #9b1c1c;
+    text-decoration: none;
+}
+a:hover
+{
+     color:#9b1c1c;
+     cursor:pointer;
+     background: #ffe6e6;
+     border-bottom: 3px solid #ffe6e6;
 }

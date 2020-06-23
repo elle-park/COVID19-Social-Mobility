@@ -19,12 +19,12 @@ body {
 }
 .nav-link:hover {
   color: #9b1c1c;
-  border-bottom: 3px solid #9b1c1c;
+  border-bottom: 3px solid #042039;
 }
 .nav-link:hover {
   color: #9b1c1c;
   background:#faf9ef;
-  border-bottom: 3px solid #9b1c1c;
+  border-bottom: 3px solid #042039;
 }
 .navbar-collapse {
   justify-content: flex-end;
@@ -50,7 +50,7 @@ body {
 
 /*--- footer ---*/
 .page-footer {
-  background-color: #9b1c1c;
+  background-color: #042039;
   color: #faf9ef;
   padding: 20px 0 10px;
   width: 100%;

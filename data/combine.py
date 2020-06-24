@@ -25,4 +25,4 @@ for col_name in df2.columns:
     df[col_name] = df2[col_name]
 
 df.to_csv("output.csv", index=False)
-print(df)
+#print(df)

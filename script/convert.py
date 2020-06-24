@@ -15,10 +15,3 @@ with open('output-state.csv', 'w', newline="") as csv_file:
     writer = csv.writer(csv_file)
     for key, value in dict_of_lists.items():
        writer.writerow([key, value])
-
-# Serializing JSON data
-json_object = json.dumps(dict_of_lists, indent = 4)
-
-# Writing to output.json
-with open("output-state.json", "w") as outfile:
-    outfile.write(json_object)

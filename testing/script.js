@@ -3,7 +3,7 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 // Set up data source
-chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-state-2020-06-22.csv?token=AIXJGDD3MFWEKABOXVLXAVS67SXOO";
+chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-total-2020-06-22.csv?token=AIXJGDHE45X5EIF4P2H2X3K67TWDU";
 chart.dataSource.parser = new am4core.CSVParser();
 chart.dataSource.parser.options.useColumnNames = true;
 
@@ -65,23 +65,28 @@ function createSeries(field, name, bullet, cover) {
   }
 }
 
+// triangle - USA, regions
+// circle - states
+// rectangle - cities
+createSeries("avg_USA", "USA", "triangle", false);
 createSeries("AK", "Alaska", "circle", false);
-createSeries("AL", "Alabama", "triangle", true);
-createSeries("AR", "Arkansas", "rectangle", false);
-createSeries("AZ", "Arizona", "rectangle", true);
-createSeries("CA", "California", "rectangle", true);
-createSeries("CO", "Colorado", "rectangle", true);
-createSeries("CT", "Connecticut", "rectangle", true);
-createSeries("DC", "Washington DC", "rectangle", true);
-createSeries("DE", "Delaware", "rectangle", true);
-createSeries("FL", "Florida", "rectangle", true);
-createSeries("GA", "Georgia", "rectangle", true);
-createSeries("HI", "Hawaii", "rectangle", true);
-createSeries("IA", "Iowa", "rectangle", true);
-createSeries("ID", "Idaho", "rectangle", true);
-createSeries("IL", "Illinois", "rectangle", true);
-createSeries("IN", "Indiana", "rectangle", true);
+createSeries("AL", "Alabama", "circle", true);
+createSeries("AR", "Arkansas", "circle", true);
+createSeries("AZ", "Arizona", "circle", true);
+createSeries("CA", "California", "circle", true);
+createSeries("CO", "Colorado", "circle", true);
+createSeries("CT", "Connecticut", "circle", true);
+createSeries("DC", "Washington DC", "circle", true);
+createSeries("DE", "Delaware", "circle", true);
+createSeries("FL", "Florida", "circle", false);
+createSeries("GA", "Georgia", "circle", true);
+createSeries("HI", "Hawaii", "circle", true);
+createSeries("IA", "Iowa", "circle", true);
+createSeries("ID", "Idaho", "circle", true);
+createSeries("IL", "Illinois", "circle", true);
+createSeries("IN", "Indiana", "circle", true);
 
+createSeries("New York City", "New York City", "rectangle", true);
 
 // Add legend
 chart.legend = new am4charts.Legend();
@@ -94,3 +99,102 @@ chart.cursor = new am4charts.XYCursor();
 // Add scroll bar - keep at bottom of graph
 chart.scrollbarX = new am4core.Scrollbar();
 chart.scrollbarX.parent = chart.bottomAxesContainer;
+
+/*
+  Geolocation with HTML5
+*/
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  // get latitude & longitude from HTML5
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+
+  // initialize Google Maps
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: position.coords.latitude, lng: position.coords.longitude}
+  });
+
+  var geocoder = new google.maps.Geocoder;
+  var infowindow = new google.maps.InfoWindow;
+
+  // input right latitude & longitude to search box
+  var latlng = document.getElementById("latlng");
+  latlng.value = position.coords.latitude + "," + position.coords.longitude;
+
+  var input = document.getElementById('latlng').value;
+  var latlngStr = input.split(',', 2);
+  var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+
+  geocoder.geocode({'location': latlng}, function(results, status) {
+    if (status === 'OK') {
+      if (results[0]) {
+        var txtOutput = document.getElementById("txtOutput");
+        txtOutput.value = results[0].formatted_address;
+      } else {
+        window.alert('No results found');
+      }
+    } else {
+      window.alert('Geocoder failed due to: ' + status);
+    }
+  });
+}
+
+
+/*
+function showPosition(position) {
+  // get latitude & longitude from HTML5
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+
+  // initialize Google Maps
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: position.coords.latitude, lng: position.coords.longitude}
+  });
+
+  var geocoder = new google.maps.Geocoder;
+  var infowindow = new google.maps.InfoWindow;
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeLatLng(geocoder, map, infowindow);
+  });
+
+  // input right latitude & longitude to search box
+  var latlng = document.getElementById("latlng");
+  latlng.value = position.coords.latitude + "," + position.coords.longitude
+
+  var input = document.getElementById('latlng').value;
+  var latlngStr = input.split(',', 2);
+  var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+
+  geocoder.geocode({'location': latlng}, function(results, status) {
+    if (status === 'OK') {
+      if (results[0]) {
+        // tester to get address as popup
+        window.alert(results[0].formatted_address)
+        map.setZoom(11);
+        var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+        infowindow.setContent(results[0].formatted_address);
+        infowindow.open(map, marker);
+      } else {
+        window.alert('No results found');
+      }
+    } else {
+      window.alert('Geocoder failed due to: ' + status);
+    }
+  });
+}
+*/

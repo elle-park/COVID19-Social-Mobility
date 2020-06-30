@@ -65,28 +65,6 @@ function createSeries(field, name, bullet, cover) {
   }
 }
 
-// triangle - USA, regions
-// circle - states
-// rectangle - cities
-createSeries("avg_USA", "USA", "triangle", false);
-createSeries("AK", "Alaska", "circle", true);
-createSeries("AL", "Alabama", "circle", true);
-createSeries("AR", "Arkansas", "circle", true);
-createSeries("AZ", "Arizona", "circle", true);
-createSeries("CA", "California", "circle", true);
-createSeries("CO", "Colorado", "circle", true);
-createSeries("CT", "Connecticut", "circle", true);
-createSeries("DC", "Washington DC", "circle", true);
-createSeries("DE", "Delaware", "circle", true);
-createSeries("FL", "Florida", "circle", true);
-createSeries("GA", "Georgia", "circle", true);
-createSeries("HI", "Hawaii", "circle", true);
-createSeries("IA", "Iowa", "circle", true);
-createSeries("ID", "Idaho", "circle", true);
-createSeries("IL", "Illinois", "circle", true);
-createSeries("IN", "Indiana", "circle", true);
-createSeries("New York City", "New York City", "rectangle", true);
-
 // Add legend
 chart.legend = new am4charts.Legend();
 
@@ -155,7 +133,7 @@ function showPosition(position) {
   });
 }
 
-function myFunction() {
+function searchFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -163,35 +141,112 @@ function myFunction() {
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
+    td2 = tr[i].getElementsByTagName("td")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
+      }
+    }
+    if (td2) {
+      txtValue = td2.textContent || td2.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
       }
     }
   }
 }
 
-function myFunction2() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput2");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable2");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc";
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
       }
     }
   }
 }
+
+/*
+  Plot by clicking on table
+*/
+var table = document.getElementById("myTable");
+if (table != null) {
+    for (var i = 0; i < table.rows.length; i++) {
+        for (var j = 0; j < table.rows[i].cells.length; j++)
+        table.rows[i].cells[j].onclick = function () {
+            tableText(this);
+        };
+    }
+}
+
+function tableText(tableCell) {
+  var location = tableCell.innerHTML;
+  // check if it's a state
+  if (location.substring(0, 2) == location.substring(0, 2).toUpperCase()) {
+    createSeries(location.substring(0, 2), location, "circle", false);
+  }
+  if (location == "Northeast" || "Midwest" || "Central" || "South" || "West") {
+    createSeries(location, location, "triangle", false);
+  }
+  else {
+    createSeries(location, location, "rectangle", false);
+  }
+
+}
+
+// triangle - USA, regions
+// circle - states
+// rectangle - cities
+createSeries("avg_USA", "USA", "triangle", false);
+
 
 /*
 function showPosition(position) {

@@ -26,46 +26,37 @@
     </div>
     <div id="map"></div>
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for city.." title="Type in a name">
-    <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search for state.." title="Type in a name">
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for city.." title="Type in a name">
 
     <div class="container">
-    <table id="myTable">
+    <table id="myTable" style="cursor: pointer;">
       <tr class="header">
-        <th style="width:30%;">City</th>
+        <th onclick="sortTable(0)" style="width:30%;">City</th>
+        <th onclick="sortTable(1)" style="width:30%;">State</th>
+        <th onclick="sortTable(2)" style="width:30%;">Region</th>
       </tr>
       <tr>
         <td>NYC</td>
+        <td>NY - New York</td>
+        <td>Northeast</td>
       </tr>
       <tr>
         <td>Honolulu</td>
+        <td>HI - Hawaii</td>
+        <td>West</td>
       </tr>
       <tr>
         <td>Lexington</td>
+        <td>MA - Massachusetts</td>
+        <td>Northeast</td>
       </tr>
       <tr>
         <td>Houston</td>
+        <td>TX - Texas</td>
+        <td>South</td>
       </tr>
     </table>
 
-    <table id="myTable2">
-      <tr class="header">
-        <th style="width:30%;">State</th>
-      </tr>
-      <tr>
-        <td>New York</td>
-      </tr>
-      <tr>
-        <td>Hawaii</td>
-      </tr>
-      <tr>
-        <td>Massachusetts</td>
-      </tr>
-      <tr>
-        <td>Texas</td>
-      </tr>
-    </table>
-  </div>
 
     <div id="chartdiv"></div>
     <script src="script.js"></script>

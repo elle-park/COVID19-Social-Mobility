@@ -69,7 +69,7 @@ function createSeries(field, name, bullet, cover) {
 // circle - states
 // rectangle - cities
 createSeries("avg_USA", "USA", "triangle", false);
-createSeries("AK", "Alaska", "circle", false);
+createSeries("AK", "Alaska", "circle", true);
 createSeries("AL", "Alabama", "circle", true);
 createSeries("AR", "Arkansas", "circle", true);
 createSeries("AZ", "Arizona", "circle", true);
@@ -78,14 +78,13 @@ createSeries("CO", "Colorado", "circle", true);
 createSeries("CT", "Connecticut", "circle", true);
 createSeries("DC", "Washington DC", "circle", true);
 createSeries("DE", "Delaware", "circle", true);
-createSeries("FL", "Florida", "circle", false);
+createSeries("FL", "Florida", "circle", true);
 createSeries("GA", "Georgia", "circle", true);
 createSeries("HI", "Hawaii", "circle", true);
 createSeries("IA", "Iowa", "circle", true);
 createSeries("ID", "Idaho", "circle", true);
 createSeries("IL", "Illinois", "circle", true);
 createSeries("IN", "Indiana", "circle", true);
-
 createSeries("New York City", "New York City", "rectangle", true);
 
 // Add legend
@@ -140,15 +139,59 @@ function showPosition(position) {
       if (results[0]) {
         var txtOutput = document.getElementById("txtOutput");
         txtOutput.value = results[0].formatted_address;
+
       } else {
         window.alert('No results found');
       }
     } else {
       window.alert('Geocoder failed due to: ' + status);
     }
+
+    var str = results[0].formatted_address;
+    var res = str.split(", ");
+    var stateOutput = document.getElementById("stateOutput");
+    stateOutput.value = res[2].substring(0, 2);
+    createSeries(res[2].substring(0, 2), res[2].substring(0, 2), "circle", false);
   });
 }
 
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function myFunction2() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput2");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable2");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
 
 /*
 function showPosition(position) {

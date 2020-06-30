@@ -22,11 +22,53 @@
     <div id="floating-panel">
       <input id="latlng" type="text">
       <input id = "txtOutput" type = "text">
+      <input id = "stateOutput" type = "text">
     </div>
     <div id="map"></div>
 
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for city.." title="Type in a name">
+    <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search for state.." title="Type in a name">
+
+    <div class="container">
+    <table id="myTable">
+      <tr class="header">
+        <th style="width:30%;">City</th>
+      </tr>
+      <tr>
+        <td>NYC</td>
+      </tr>
+      <tr>
+        <td>Honolulu</td>
+      </tr>
+      <tr>
+        <td>Lexington</td>
+      </tr>
+      <tr>
+        <td>Houston</td>
+      </tr>
+    </table>
+
+    <table id="myTable2">
+      <tr class="header">
+        <th style="width:30%;">State</th>
+      </tr>
+      <tr>
+        <td>New York</td>
+      </tr>
+      <tr>
+        <td>Hawaii</td>
+      </tr>
+      <tr>
+        <td>Massachusetts</td>
+      </tr>
+      <tr>
+        <td>Texas</td>
+      </tr>
+    </table>
+  </div>
+
     <div id="chartdiv"></div>
     <script src="script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxBa17etws161VWK2pmyUJ4XSrS1ZpFns&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWc5f7bo70Fo1Oiw-JdUgzoxXPqbReWeY&callback=initMap"></script>
 </body>
 </html>

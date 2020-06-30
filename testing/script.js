@@ -3,7 +3,7 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 // Set up data source
-chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-total-2020-06-22.csv?token=AIXJGDHE45X5EIF4P2H2X3K67TWDU";
+chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-total-2020-06-22.csv?token=AIXJGDC3QK65DCRMN75ELYS7ATXI2";
 chart.dataSource.parser = new am4core.CSVParser();
 chart.dataSource.parser.options.useColumnNames = true;
 
@@ -233,12 +233,13 @@ function tableText(tableCell) {
   if (location.substring(0, 2) == location.substring(0, 2).toUpperCase()) {
     createSeries(location.substring(0, 2), location, "circle", false);
   }
-  if (location == "Northeast" || "Midwest" || "Central" || "South" || "West") {
+  else if (location == ("Northeast" || "Midwest" || "Central" || "South" || "West")) {
     createSeries(location, location, "triangle", false);
   }
   else {
     createSeries(location, location, "rectangle", false);
   }
+
 
 }
 

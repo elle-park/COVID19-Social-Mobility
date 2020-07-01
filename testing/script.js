@@ -88,6 +88,11 @@ function getLocation() {
   }
 }
 
+var xytable = document.getElementById("myTable");
+function showTable() {
+  document.getElementById('myTable').style.display='inherit';
+}
+
 /*
   Plotting on map disabled
   Reverse geocoding based on longitude & latitude

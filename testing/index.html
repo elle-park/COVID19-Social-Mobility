@@ -1,46 +1,52 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-    <title>test graph site</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+  <title>test graph site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-    <h1>social mobility graph</h1>
-    <p>Click the button to get your coordinates.</p>
+  <h1>social mobility graph</h1>
+  <p>Click the button to get your coordinates.</p>
 
-    <button onclick="getLocation()">Get Location</button>
+  <button onclick="getLocation()">Get Location</button>
 
-    <p id="demo"></p>
+  <p id="demo"></p>
 
-    <div id="floating-panel">
-      <input id="latlng" type="text">
-      <input id = "txtOutput" type = "text">
-      <input id = "stateOutput" type = "text">
-    </div>
-    <div id="map"></div>
+  <div id="floating-panel">
+    <input id="latlng" type="text">
+    <input id="txtOutput" type="text">
+    <input id="stateOutput" type="text">
+  </div>
+  <div id="map"></div>
 
-    <!--onblur="document.getElementById('myTable').style.display='none';"-->
-    <!--
-    <input type="text" onfocus="document.getElementById('myTable').style.display='inherit';"
-    id="myInput" onkeyup="searchFunction()" placeholder="Search for location.." title="Location Search Bar">
-  -->
-    <input type="text" onclick="showTable()" id="myInput" onkeyup="searchFunction()"
-    placeholder="Search for location.." title="Location Search Bar">
+  <!--onblur="document.getElementById('myTable').style.display='none';"
+   onfocus="document.getElementById('myTable').style.display='inherit';"-->
+  <input type="text" onfocus="document.getElementById('myTable').style.display='table';"
+  id="myInput" onkeyup="searchFunction()" placeholder="Search for location.." title="Location Search Bar">
 
-    <div class="container" style="min-width:100%;">
-    <table id="myTable" style="min-width: 100%; cursor: pointer; display:none;">
+  <div class="container table-wrapper-scroll-y my-custom-scrollbar">
+    <table id="myTable" style="min-width: 100%; cursor: pointer;">
+
       <tr class="header">
         <th onclick="sortTable(0)" style="width:33%;">City</th>
         <th onclick="sortTable(1)" style="width:33%;">State</th>
         <th onclick="sortTable(2)" style="width:33%;">Region</th>
+      </tr>
+
+      <tr>
+        <td>Irvine</td>
+        <td>CA - California</td>
+        <td>West</td>
       </tr>
       <tr>
         <td>New York City</td>
@@ -63,11 +69,6 @@
         <td>South</td>
       </tr>
       <tr>
-        <td>Irvine</td>
-        <td>CA - California</td>
-        <td>West</td>
-      </tr>
-      <tr>
         <td>Seattle</td>
         <td>WA - Washington</td>
         <td>West</td>
@@ -75,10 +76,12 @@
     </table>
   </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <div id="chartdiv"></div>
-    <script src="script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWc5f7bo70Fo1Oiw-JdUgzoxXPqbReWeY&callback=initMap"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <div id="chartdiv"></div>
+  <script src="script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWc5f7bo70Fo1Oiw-JdUgzoxXPqbReWeY&callback=initMap"></script>
 </body>
+
 </html>

@@ -88,6 +88,10 @@ function getLocation() {
   }
 }
 
+/*
+  Plotting on map disabled
+  Reverse geocoding based on longitude & latitude
+*/
 function showPosition(position) {
   // get latitude & longitude from HTML5
   x.innerHTML = "Latitude: " + position.coords.latitude +
@@ -131,6 +135,9 @@ function showPosition(position) {
   });
 }
 
+/*
+  Search City, State, Region
+*/
 function searchFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
@@ -140,6 +147,7 @@ function searchFunction() {
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
     td2 = tr[i].getElementsByTagName("td")[1];
+    td3 = tr[i].getElementsByTagName("td")[2];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -154,19 +162,28 @@ function searchFunction() {
         tr[i].style.display = "";
       }
     }
+    if (td3) {
+      txtValue = td3.textContent || td3.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      }
+    }
   }
 }
 
+/*
+  Sort table A-Z or Z-A
+*/
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable");
   switching = true;
-  //Set the sorting direction to ascending:
   dir = "asc";
 
   while (switching) {
     switching = false;
     rows = table.rows;
+
     for (i = 1; i < (rows.length - 1); i++) {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD")[n];
@@ -201,7 +218,7 @@ function sortTable(n) {
 */
 var table = document.getElementById("myTable");
 if (table != null) {
-    for (var i = 0; i < table.rows.length; i++) {
+    for (var i = 1; i < table.rows.length; i++) {
         for (var j = 0; j < table.rows[i].cells.length; j++)
         table.rows[i].cells[j].onclick = function () {
             tableText(this);
@@ -211,69 +228,20 @@ if (table != null) {
 
 function tableText(tableCell) {
   var location = tableCell.innerHTML;
-  // check if it's a state
-  if (location.substring(0, 2) == location.substring(0, 2).toUpperCase()) {
+  var regions = ["Northeast", "Midwest", "Central", "South", "West"];
+  // check for state (circle)
+  if (location.substring(0, 2) === location.substring(0, 2).toUpperCase()) {
     createSeries(location.substring(0, 2), location, "circle", false);
   }
-  else if (location == ("Northeast" || "Midwest" || "Central" || "South" || "West")) {
+  // check for region (triangle)
+  else if (regions.indexOf(location) > -1) {
     createSeries(location, location, "triangle", false);
   }
+  // otherwise a city (rectangle)
   else {
     createSeries(location, location, "rectangle", false);
   }
 }
 
-// triangle - USA, regions
-// circle - states
-// rectangle - cities
+// plot US avg by default
 createSeries("avg_USA", "USA", "triangle", false);
-
-
-/*
-function showPosition(position) {
-  // get latitude & longitude from HTML5
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-
-  // initialize Google Maps
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
-    center: {lat: position.coords.latitude, lng: position.coords.longitude}
-  });
-
-  var geocoder = new google.maps.Geocoder;
-  var infowindow = new google.maps.InfoWindow;
-
-  document.getElementById('submit').addEventListener('click', function() {
-    geocodeLatLng(geocoder, map, infowindow);
-  });
-
-  // input right latitude & longitude to search box
-  var latlng = document.getElementById("latlng");
-  latlng.value = position.coords.latitude + "," + position.coords.longitude
-
-  var input = document.getElementById('latlng').value;
-  var latlngStr = input.split(',', 2);
-  var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
-
-  geocoder.geocode({'location': latlng}, function(results, status) {
-    if (status === 'OK') {
-      if (results[0]) {
-        // tester to get address as popup
-        window.alert(results[0].formatted_address)
-        map.setZoom(11);
-        var marker = new google.maps.Marker({
-          position: latlng,
-          map: map
-        });
-        infowindow.setContent(results[0].formatted_address);
-        infowindow.open(map, marker);
-      } else {
-        window.alert('No results found');
-      }
-    } else {
-      window.alert('Geocoder failed due to: ' + status);
-    }
-  });
-}
-*/

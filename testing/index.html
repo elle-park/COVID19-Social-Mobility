@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>amCharts</title>
+    <title>test graph site</title>
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
     <script src="https://www.amcharts.com/lib/4/charts.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-    <h1>amCharts</h1>
+    <h1>social mobility graph</h1>
 
 
     <p>Click the button to get your coordinates.</p>
@@ -26,14 +26,16 @@
     </div>
     <div id="map"></div>
 
-    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for city.." title="Type in a name">
+    <!--onblur="document.getElementById('myTable').style.display='none';"-->
+    <input type="text" onfocus="document.getElementById('myTable').style.display='inherit';"
+    id="myInput" onkeyup="searchFunction()" placeholder="Search for location.." title="Location Search Bar">
 
     <div class="container">
-    <table id="myTable" style="cursor: pointer;">
+    <table id="myTable" style="width: 100%; cursor: pointer;">
       <tr class="header">
-        <th onclick="sortTable(0)" style="width:30%;">City</th>
-        <th onclick="sortTable(1)" style="width:30%;">State</th>
-        <th onclick="sortTable(2)" style="width:30%;">Region</th>
+        <th onclick="sortTable(0)" style="width:33%;">City</th>
+        <th onclick="sortTable(1)" style="width:33%;">State</th>
+        <th onclick="sortTable(2)" style="width:33%;">Region</th>
       </tr>
       <tr>
         <td>New York City</td>
@@ -55,8 +57,18 @@
         <td>TX - Texas</td>
         <td>South</td>
       </tr>
+      <tr>
+        <td>Irvine</td>
+        <td>CA - California</td>
+        <td>West</td>
+      </tr>
+      <tr>
+        <td>Seattle</td>
+        <td>WA - Washington</td>
+        <td>West</td>
+      </tr>
     </table>
-
+  </div>
 
     <div id="chartdiv"></div>
     <script src="script.js"></script>

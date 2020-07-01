@@ -38,7 +38,7 @@ body {
   border: 1px solid #999;
 }
 #latlng, #txtOutput, #stateOutput {
-  width: 225px;
+  width: 100%;
 }
 
 * {
@@ -57,10 +57,13 @@ body {
 }
 
 #myTable {
+  display:none;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-size: 18px;
+  height: 200px;
+  overflow-y: auto;
 }
 
 #myTable th:hover {

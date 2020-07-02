@@ -74,6 +74,9 @@ chart.cursor = new am4charts.XYCursor();
 // Add scroll bar - keep at bottom of graph
 chart.scrollbarX = new am4core.Scrollbar();
 chart.scrollbarX.parent = chart.bottomAxesContainer;
+chart.events.on("ready", function () {
+  categoryAxis.zoomToCategories("2020-01-27", "2020-06-15");
+});
 
 /*
   Geolocation with HTML5
@@ -218,6 +221,7 @@ if (table != null) {
         for (var j = 0; j < table.rows[i].cells.length; j++)
         table.rows[i].cells[j].onclick = function () {
             tableText(this);
+            this.onclick=null;
         };
     }
 }

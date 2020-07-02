@@ -93,10 +93,6 @@ function getLocation() {
   Reverse geocoding based on longitude & latitude
 */
 function showPosition(position) {
-  // get latitude & longitude from HTML5
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-
   // initialize Google Maps
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
@@ -228,7 +224,7 @@ if (table != null) {
 
 function tableText(tableCell) {
   var location = tableCell.innerHTML;
-  var regions = ["Northeast", "Midwest", "Central", "South", "West"];
+  var regions = ["Northeast", "Midwest", "Central", "South", "West", "Caribbean"];
   // check for state (circle)
   if (location.substring(0, 2) === location.substring(0, 2).toUpperCase()) {
     createSeries(location.substring(0, 2), location, "circle", false);

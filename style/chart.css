@@ -32,6 +32,26 @@ body {
   margin: 50px auto;
 }
 
+/* width */
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 h1 {
   font-weight: 200;
   font-size: 3em;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <title>COVID-19 Social Mobility</title>
@@ -7,8 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./style/data.css">
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-md navbar-fixed-top">
@@ -36,31 +39,30 @@
       </ul>
     </div>
   </nav>
-<!--
-  <header class="page-header header container-fluid">
-    <div class="description">
-      <h1>Data</h1>
-      <p>A measure of social distancing derived from Twitter</p>
-    </div>
-  </header>
--->
+
   <div class="wrapper">
 
     <div class="row">
       <div class="column1">
         <h1>Social Mobility Reduction Data</h1>
+        <p>TEMP: write something about the paper: </p>
+
+        <a href="https://arxiv.org/abs/2004.02397">
+          <img alt="Paiheng Xu Paper" src="./style/paper-ss.png" width="90%" height="40%">
+        </a>
+
         <p>We release the raw numbers behind our analysis. For each data release we will post two files:</p>
 
         <h2>Excel/CSV containing measurements by US state</h2>
         <p>This file contains the current social mobility index for each US state and territory. The columns are:
-        <ul class="datalist">
-          <li><span class="variable">location</span> The US state or territory and the US as a whole. We include some cities and will add new ones over time.</li>
-          <li><span class="variable">mobility_before_distancing</span>	The social mobility index for the entire time period of the dataset, from January 1, 2019 up to the date before social distancing, March 15, 2020.</li>
-          <li><span class="variable">mobility_after_distancing</span> The social mobility index since March 16, 2020. Note that social distancing started at different times for different states, but we don't include that analysis in this data.</li>
-          <li><span class="variable">reduction</span> The percent reduction of social mobility. This is computed as <br><span class="variable">1 - mobility_after_distancing / mobility_before_distancing</span>.</li>
-          <li><span class="variable">num_users</span> The number of unique Twitter users that were used to compute this row.</li>
-          <li><span class="variable">num_records</span> The number of unique tweets used to compute this row.</li>
-        </ul>
+          <ul class="datalist">
+            <li><span class="variable">location</span> The US state or territory and the US as a whole. We include some cities and will add new ones over time.</li>
+            <li><span class="variable">mobility_before_distancing</span> The social mobility index for the entire time period of the dataset, from January 1, 2019 up to the date before social distancing, March 15, 2020.</li>
+            <li><span class="variable">mobility_after_distancing</span> The social mobility index since March 16, 2020. Note that social distancing started at different times for different states, but we don't include that analysis in this data.</li>
+            <li><span class="variable">reduction</span> The percent reduction of social mobility. This is computed as <br><span class="variable">1 - mobility_after_distancing / mobility_before_distancing</span>.</li>
+            <li><span class="variable">num_users</span> The number of unique Twitter users that were used to compute this row.</li>
+            <li><span class="variable">num_records</span> The number of unique tweets used to compute this row.</li>
+          </ul>
         </p>
 
         <h2>Longitudinal data with weekly measurements by US state</h2>
@@ -68,41 +70,59 @@
       </div>
 
       <div class="column2">
-        <h3>Download</h3>
-        <h4>Paper</h4>
-        <p><a href="https://arxiv.org/abs/2004.02397" target="_blank">The Twitter Social Mobility Index: <br>Measuring Social Distancing Practices from Geolocated Tweets</a></p>
-
-        <h4>Data Files</h4>
-        <h4>3/20/2020</h4>
-        <p><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.state_data.20200330.csv">smi_state_data.csv</a>
-        <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.20200330.csv">smi_longitudinal_data.csv</a></p>
-        <h4>4/27/2020</h4>
-        <p><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.state_data.20200427.csv">smi_state_data.csv</a>
-        <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.state.20200427.csv">smi_longitudinal_data.csv</a></p>
-        <p>Mobility data for 100 most <br>populous cities in the US:
-        <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.city_data.20200427.csv">smi_city_data.csv</a>
-        <br><a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.city.20200427.csv">smi_longitudinal_city_data.csv</a></p>
+        <a href="https://arxiv.org/abs/2004.02397" target="_blank">Paper</a>
+        <button class="dropdown-btn">Latest Data
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.state_data.20200330.csv">
+            <i class="fa fa-download" aria-hidden="true"></i> smi_state_data.csv
+          </a>
+          <a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.20200330.csv">
+            <i class="fa fa-download" aria-hidden="true"></i> smi_longitudinal_data.csv
+          </a>
+        </div>
+        <button class="dropdown-btn">-4/27/2020
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.state_data.20200330.csv">
+            <i class="fa fa-download" aria-hidden="true"></i> smi_state_data.csv
+          </a>
+          <a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.20200330.csv">
+            <i class="fa fa-download" aria-hidden="true"></i> smi_longitudinal_data.csv
+          </a>
+        </div>
+        <button class="dropdown-btn">-3/20/2020
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.state_data.20200330.csv">
+            <i class="fa fa-download" aria-hidden="true"></i> smi_state_data.csv
+          </a>
+          <a href="http://socialmobility.covid19dataresources.org/data/social_mobility_index.longitudinal.20200330.csv">
+            <i class="fa fa-download" aria-hidden="true"></i> smi_longitudinal_data.csv
+          </a>
+        </div>
 
       </div>
     </div>
   </div>
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="footer-img row">
-        <a href="mailto:mdredze@cs.jhu.edu">
-        <img border="0" alt="Email" src="./style/email.png" width="50" height="50">
-        <a href="https://www.twitter.com/mdredze">
-        <img border="0" alt="Twitter" src="./style/twitter.png" width="50" height="50">
-        <a href="http://www.socialmediaforpublichealth.org/covid-19/">
-        <img border="0" alt="Website" src="./style/website.png" width="50" height="50">
-      </div>
-    </div>
-    <div class="footer-copyright text-center">© 2020 Copyright: covid19dataresources.org</div>
-  </footer>
-
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="./script/script.js"></script>
+  <script src="./script/data.js"></script>
 </body>
+<footer class="page-footer">
+  <div class="footer-img row">
+    <a href="mailto:mdredze@cs.jhu.edu">
+      <img border="0" alt="Email" src="./style/email.png" width="50" height="50">
+      <a href="https://www.twitter.com/mdredze">
+        <img border="0" alt="Twitter" src="./style/twitter.png" width="50" height="50">
+        <a href="http://www.socialmediaforpublichealth.org/covid-19/">
+          <img border="0" alt="Website" src="./style/website.png" width="50" height="50">
+  </div>
+  <div class="footer-copyright text-center">© 2020 Copyright: covid19dataresources.org</div>
+</footer>
+
 </html>

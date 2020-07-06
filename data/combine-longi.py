@@ -2,8 +2,8 @@ import csv
 import numpy as np
 import pandas as pd
 
-data_state = pd.read_csv("longitudinal-state-2020-06-22.csv")
-data_city = pd.read_csv("longitudinal-city-2020-06-22.csv")
+data_state = pd.read_csv("longitudinal-state-2020-06-29.csv")
+data_city = pd.read_csv("longitudinal-city-2020-06-29.csv")
 
 df = pd.DataFrame(data_state)
 df2 = pd.DataFrame(data_city)
@@ -26,6 +26,6 @@ df['Caribbean'] = df[carib].mean(axis=1)
 for col_name in df2.columns:
     df[col_name.replace("_", " ")] = df2[col_name]
 
-df.to_csv("output.csv", index=False)
+df.to_csv("longitudinal-total-2020-06-29.csv", index=False)
 #print(df.index)
 #df.iloc[0].transpose().to_csv("citylist.csv", index=True)

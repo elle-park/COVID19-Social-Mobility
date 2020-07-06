@@ -3,7 +3,7 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 // Set up data source
-chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-total-2020-06-22.csv?token=AIXJGDC3QK65DCRMN75ELYS7ATXI2";
+chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-total-2020-06-29.csv?token=AIXJGDCNPRRSFBD4EN6THJ27BTBYS";
 chart.dataSource.parser = new am4core.CSVParser();
 chart.dataSource.parser.options.useColumnNames = true;
 
@@ -75,7 +75,7 @@ chart.cursor = new am4charts.XYCursor();
 chart.scrollbarX = new am4core.Scrollbar();
 chart.scrollbarX.parent = chart.bottomAxesContainer;
 chart.events.on("ready", function () {
-  categoryAxis.zoomToCategories("2020-01-27", "2020-06-15");
+  categoryAxis.zoomToCategories("2020-01-27", "2020-06-22");
 });
 
 /*

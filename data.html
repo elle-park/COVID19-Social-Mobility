@@ -56,17 +56,18 @@
         <h2>Excel/CSV containing measurements by US state</h2>
         <p>This file contains the current social mobility index for each US state and territory. The columns are:
           <ul class="datalist">
-            <li><span class="variable">location</span> The US state or territory and the US as a whole. We include some cities and will add new ones over time.</li>
+            <li><span class="variable">location</span> The US state, city, or territory and the US as a whole. We included every state, 100 most populated cities in the US, and the 2 territories (Puerto Rico and Virgin Islands). We will add new ones over time.</li>
             <li><span class="variable">mobility_before_distancing</span> The social mobility index for the entire time period of the dataset, from January 1, 2019 up to the date before social distancing, March 15, 2020.</li>
-            <li><span class="variable">mobility_after_distancing</span> The social mobility index since March 16, 2020. Note that social distancing started at different times for different states, but we don't include that analysis in this data.</li>
+            <li><span class="variable">mobility_after_distancing</span> The social mobility index since March 16, 2020. Note that social distancing started at different times for different states, but we don't the include state-varied analysis in this data.</li>
             <li><span class="variable">reduction</span> The percent reduction of social mobility. This is computed as <br><span class="variable">1 - mobility_after_distancing / mobility_before_distancing</span>.</li>
-            <li><span class="variable">num_users</span> The number of unique Twitter users that were used to compute this row.</li>
-            <li><span class="variable">num_records</span> The number of unique tweets used to compute this row.</li>
+            <li><span class="variable">num_users</span> The number of unique Twitter users that were used to compute for this location.</li>
+            <li><span class="variable">num_records</span> The number of unique tweets used to compute for this location.</li>
           </ul>
         </p>
 
         <h2>Longitudinal data with weekly measurements by US state</h2>
-        <p>This file contains the social mobility index for every location for each week starting in January 1, 2019.</p>
+        <p>This file contains the social mobility index for every location for each week starting in January 1, 2019.
+        This data is available for every US state, 100 most populated cities, 5 regions (Northeast, Midwest, South, Central, West), and 2 territories (Puerto Rico and Virgin Islands).</p>
       </div>
 
       <div class="column2">

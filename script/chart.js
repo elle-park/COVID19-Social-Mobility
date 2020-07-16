@@ -3,7 +3,7 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 // Set up data source
-chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-total-2020-06-29.csv?token=AIXJGDCNPRRSFBD4EN6THJ27BTBYS";
+chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/longitudinal-total-2020-06-29.csv?token=AIXJGDEQSPXMRCQQ6P2G7RK7DGHNA";
 chart.dataSource.parser = new am4core.CSVParser();
 chart.dataSource.parser.options.useColumnNames = true;
 
@@ -67,6 +67,7 @@ function createSeries(field, name, bullet, cover) {
 
 // Add legend
 chart.legend = new am4charts.Legend();
+chart.legend.position = "top";
 
 // Add cursor
 chart.cursor = new am4charts.XYCursor();

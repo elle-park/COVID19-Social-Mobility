@@ -7,22 +7,26 @@ body {
 
 /*--- navigation bar ---*/
 .navbar {
-  background:#faf9ef;
+  background: #faf9ef;
   border-bottom: 3px solid transparent;
 }
+
 .nav-link,
 .navbar-brand {
   color: #00283d;
   cursor: pointer;
 }
+
 .nav-link {
   margin-right: 1em !important;
   border-bottom: 3px solid transparent
 }
+
 .nav-link:hover {
   color: #9b1c1c;
   border-bottom: 3px solid #042039;
 }
+
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -59,12 +63,16 @@ h1 {
 }
 
 h2 {
-  font-weight: 200;
-  font-size: 0.9em;
-  margin: 0 0 50px;
-  color: #999;
+  font-weight: 400;
+  font-size: 2em;
+  margin: 2em 0 0.1em 0;
 }
 
+p {
+  font-weight: 250;
+  font-size: 1em;
+  margin: 0 20% 0.1em 20%;
+}
 
 .row:after {
   content: "";
@@ -84,10 +92,11 @@ h2 {
 }
 
 #floating-panel {
-  display:none;
+  display: none;
 }
+
 #floating-panel {
-  display:none;
+  display: none;
 }
 
 #latlng, #txtOutput, #stateOutput {
@@ -102,7 +111,9 @@ h2 {
   background-image: url('searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 90%;
+  width: 49%;
+  float: left;
+  margin-left: 15%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
@@ -110,10 +121,10 @@ h2 {
 }
 
 #myTable {
-  display:table;
+  display: table;
   border-collapse: collapse;
   min-width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid #042039;
   font-size: 18px;
   height: 200px;
 }
@@ -133,15 +144,39 @@ h2 {
 }
 
 #myTable tr.header, #myTable td:hover {
-  background-color: #f1f1f1;
+  background-color: #c4ac6a;
+  color: black;
 }
+
+#locbutton {
+  background-image: url('locationpin.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-color: #9b1c1c;
+  color: white;
+  width: 20%;
+  float: right;
+  margin-right: 15%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
 .my-custom-scrollbar {
   position: relative;
   height: 200px;
   overflow: auto;
 }
+
 .table-wrapper-scroll-y {
   display: block;
+}
+
+/* caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
 }
 
 .page-footer {
@@ -152,24 +187,28 @@ h2 {
   bottom: 0;
   left: 0;
 }
-.footer{
+
+.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 50px;
   line-height: 50px;
 }
+
 .footer-copyright {
   color: #d4867e;
   padding: 5px 0;
 }
-.footer-img{
+
+.footer-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
-.footer-img img{
+
+.footer-img img {
   margin-left: 10px;
   margin-right: 10px;
 }

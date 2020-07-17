@@ -1,3 +1,4 @@
+am4core.useTheme(am4themes_kelly);
 am4core.useTheme(am4themes_animated);
 // Create chart instance
 var chart = am4core.create("chartdiv", am4charts.XYChart);
@@ -8,15 +9,24 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 //chart.dataSource.parser.options.useColumnNames = true;
 
 
-var data = [
-  {
+var data = [{
     "location": "United States",
-    "mobility_before_distancing": 29.531047545190876,
-    "mobility_after_distancing": 65.58009974912021
+    "mobility_before_distancing": 65.58,
+    "mobility_after_distancing": 29.53
+  },
+  {
+    "location": "Los Angeles",
+    "mobility_before_distancing": 103.02,
+    "mobility_after_distancing": 50.25
+  },
+  {
+    "location": "New York City",
+    "mobility_before_distancing": 86.08,
+    "mobility_after_distancing": 36.38
   }
 ];
 
-chart.data=data;
+chart.data = data;
 // Create axes
 var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "location";
@@ -60,22 +70,22 @@ function createSeries(field, name) {
 */
 var table = document.getElementById("myTable");
 if (table != null) {
-    for (var i = 1; i < table.rows.length; i++) {
-        for (var j = 0; j < table.rows[i].cells.length; j++)
-        table.rows[i].cells[j].onclick = function () {
-          data.push({
-            "location": this.innerHTML,
-            "mobility_before_distancing": 50,
-            "mobility_after_distancing": 50
-          });
-          chart.data = reloadData();
-        };
-    }
+  for (var i = 1; i < table.rows.length; i++) {
+    for (var j = 0; j < table.rows[i].cells.length; j++)
+      table.rows[i].cells[j].onclick = function() {
+        data.push({
+          "location": this.innerHTML,
+          "mobility_before_distancing": 50,
+          "mobility_after_distancing": 50
+        });
+        chart.data = reloadData();
+      };
+  }
 }
 
 function reloadData() {
   return data;
 }
 
-createSeries("mobility_before_distancing", "Pre-Mobility");
-createSeries("mobility_after_distancing", "Post-Mobility");
+createSeries("mobility_before_distancing", "Pre-3/16");
+createSeries("mobility_after_distancing", "Post-3/16");

@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 data_state = pd.read_csv("longitudinal-state-2020-07-05.csv")
-data_city = pd.read_csv("longitudinal-city-2020-07-05.csv")
+data_city = pd.read_csv("longitudinal-city-2020-06-29.csv")
 
 df = pd.DataFrame(data_state)
 df2 = pd.DataFrame(data_city)

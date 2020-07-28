@@ -1,29 +1,31 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $('.header').height($(window).height());
 })
 
 var d1 = new Date();
 var d2 = new Date("2020/03/16");
-var diff = Math.abs(d1-d2);
+var diff = Math.abs(d1 - d2);
 
-function dhm(t){
-    var cd = 24 * 60 * 60 * 1000,
-        ch = 60 * 60 * 1000,
-        d = Math.floor(t / cd),
-        h = Math.floor( (t - d * cd) / ch),
-        m = Math.round( (t - d * cd - h * ch) / 60000),
-        pad = function(n){ return n < 10 ? '0' + n : n; };
-  if( m === 60 ){
+function dhm(t) {
+  var cd = 24 * 60 * 60 * 1000,
+    ch = 60 * 60 * 1000,
+    d = Math.floor(t / cd),
+    h = Math.floor((t - d * cd) / ch),
+    m = Math.round((t - d * cd - h * ch) / 60000),
+    pad = function(n) {
+      return n < 10 ? '0' + n : n;
+    };
+  if (m === 60) {
     h++;
     m = 0;
   }
-  if( h === 24 ){
+  if (h === 24) {
     d++;
     h = 0;
   }
   return [d];
 }
-document.getElementById("datedisplay").innerHTML = dhm(diff) + " days since 3/16/2020, start of social distancing on the national level.";
+document.getElementById("datedisplay").innerHTML = dhm(diff) + " days since 3/16/2020, the start of social distancing on the national level.";
 
 
 am4core.useTheme(am4themes_kelly);
@@ -85,7 +87,7 @@ function createSeries(field, name) {
   valueLabel.label.truncate = false;
 
   var categoryLabel = series.bullets.push(new am4charts.LabelBullet());
-  categoryLabel.label.text = "{name}km";
+  categoryLabel.label.text = "{name}";
   categoryLabel.label.horizontalCenter = "right";
   categoryLabel.label.dx = -10;
   categoryLabel.label.fill = am4core.color("#fff");

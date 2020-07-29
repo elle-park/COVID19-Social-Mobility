@@ -81,7 +81,7 @@ p {
 }
 
 #chartdiv {
-  width: 100%;
+  width: 80%;
   height: 600px;
 }
 
@@ -127,6 +127,10 @@ p {
   border: 1px solid #042039;
   font-size: 18px;
   height: 200px;
+}
+
+#myTable:hover{
+  display: table;
 }
 
 #myTable th:hover {

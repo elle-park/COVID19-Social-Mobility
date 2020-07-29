@@ -67,7 +67,7 @@ function createSeries(field, name, bullet, cover) {
 
 // Add legend
 chart.legend = new am4charts.Legend();
-chart.legend.position = "top";
+chart.legend.position = "bottom";
 
 // Add cursor
 chart.cursor = new am4charts.XYCursor();

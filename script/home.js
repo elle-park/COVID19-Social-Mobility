@@ -34,29 +34,10 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 // Set up data source
-//chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/index-total.csv?token=AIXJGDHWSVBGKN2S7NCX56K7A6YJQ";
-//chart.dataSource.parser = new am4core.CSVParser();
-//chart.dataSource.parser.options.useColumnNames = true;
+chart.dataSource.url = "https://raw.githubusercontent.com/elle-park/COVID19-Social-Mobility/master/data/home-index.json";
+chart.dataSource.parser = new am4core.JSONParser();
+chart.dataSource.parser.options.useColumnNames = true;
 
-
-var data = [{
-    "location": "United States",
-    "mobility_before_distancing": 65.58,
-    "mobility_after_distancing": 29.53
-  },
-  {
-    "location": "Los Angeles",
-    "mobility_before_distancing": 103.02,
-    "mobility_after_distancing": 50.25
-  },
-  {
-    "location": "New York City",
-    "mobility_before_distancing": 86.08,
-    "mobility_after_distancing": 36.38
-  }
-];
-
-chart.data = data;
 // Create axes
 var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "location";

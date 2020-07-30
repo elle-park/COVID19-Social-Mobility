@@ -8,4 +8,4 @@ data_city = pd.read_csv("index-city.csv")
 df = data_state.append(data_city)
 
 #print(out)
-df.to_csv("index-total.csv", index=False)
+df.to_csv("index_compiled.csv", index=False)

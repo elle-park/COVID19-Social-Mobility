@@ -26,6 +26,6 @@ df['Caribbean'] = df[carib].mean(axis=1)
 for col_name in df2.columns:
     df[col_name.replace("_", " ")] = df2[col_name]
 
-df.to_csv("longitudinal-total-2020-07-05.csv", index=False)
+df.to_csv("longitudinal_compiled.csv", index=False)
 #print(df.index)
 #df.iloc[0].transpose().to_csv("citylist.csv", index=True)

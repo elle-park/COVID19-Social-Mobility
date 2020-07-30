@@ -1,7 +1,3 @@
-$(document).ready(function() {
-  $('.header').height($(window).height());
-})
-
 var d1 = new Date();
 var d2 = new Date("2020/03/16");
 var diff = Math.abs(d1 - d2);
@@ -56,12 +52,12 @@ function createSeries(field, name) {
   series.dataFields.valueX = field;
   series.dataFields.categoryY = "location";
   series.name = name;
-  series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]";
+  series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]km";
   series.columns.template.height = am4core.percent(100);
   series.sequencedInterpolation = true;
 
   var valueLabel = series.bullets.push(new am4charts.LabelBullet());
-  valueLabel.label.text = "{valueX}km";
+  //valueLabel.label.text = "{valueX}km";
   valueLabel.label.horizontalCenter = "left";
   valueLabel.label.dx = 10;
   valueLabel.label.hideOversized = false;

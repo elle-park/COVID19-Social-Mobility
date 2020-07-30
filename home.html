@@ -57,34 +57,42 @@
 
       </p>
       <div id="chartdiv"></div>
-      <p>
-        REPLACE with highest/lowest data + US data
-        <br>Sentence 1: how people are chekcing in geolocation/people are social distancing
-        <br>Sentence 2: how movement on Twitter has changed since COVID-19
-        <br>Sentence 3: how our project monitors public tweets to analyze soicla distancing measures
-      </p>
+      <div class="wrapper">
+        <p>
+          Above graph shows the difference in the average movement in a given week before and after the social
+          distancing guidelines due to COVID-19. We show the change for the United States in average as well as
+          areas with the highest and the lowest percentage of reduction. </p>
+        <p>
+          We are monitoring public Tweets to gather geolocation data of users to see how people are
+          socially distancing after the March 16th guidelines announced nationally by the White House.
+          On average, there is a 54.97% reduction in movement within the United States, sampled by
+          Tweets from public Twitter users.
+          By tracking geolocation data, we can find which state, city, or region within the US is
+          following the guidelines and reducing travel the most and how that could locally link to reduction or
+          surges of COVID-19.
+        </p>
+      </div>
     </div>
 
   </header>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="footer-img row">
-        <a href="mailto:mdredze@cs.jhu.edu">
-          <img border="0" alt="Email" src="./style/email.png" width="50" height="50">
-          <a href="https://www.twitter.com/mdredze">
-            <img border="0" alt="Twitter" src="./style/twitter.png" width="50" height="50">
-            <a href="http://www.socialmediaforpublichealth.org/covid-19/">
-              <img border="0" alt="Website" src="./style/website.png" width="50" height="50">
-      </div>
-    </div>
-    <div class="footer-copyright text-center">© 2020 Copyright: covid19dataresources.org</div>
-  </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWc5f7bo70Fo1Oiw-JdUgzoxXPqbReWeY&callback=initMap"></script>
   <script src="./script/home.js"></script>
 </body>
+<footer class="page-footer">
+  <div class="container">
+    <div class="footer-img row">
+      <a href="mailto:mdredze@cs.jhu.edu">
+        <img border="0" alt="Email" src="./style/email.png" width="50" height="50">
+        <a href="https://www.twitter.com/mdredze">
+          <img border="0" alt="Twitter" src="./style/twitter.png" width="50" height="50">
+          <a href="http://www.socialmediaforpublichealth.org/covid-19/">
+            <img border="0" alt="Website" src="./style/website.png" width="50" height="50">
+    </div>
+  </div>
+  <div class="footer-copyright text-center">© 2020 Copyright: covid19dataresources.org</div>
+</footer>
 
 </html>

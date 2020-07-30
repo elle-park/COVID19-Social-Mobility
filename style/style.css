@@ -129,13 +129,13 @@ ul.datalist {
 }
 .biblio {
   text-align: left;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
 }
 a {
     color: #9b1c1c;
     text-decoration: none;
 }
-a:hover
+.biblio a:hover
 {
      color:#9b1c1c;
      cursor:pointer;

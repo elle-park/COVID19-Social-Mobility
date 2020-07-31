@@ -45,6 +45,7 @@ categoryAxis.renderer.cellEndLocation = 0.9;
 
 var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.opposite = true;
+valueAxis.title.text = "distance (km)";
 
 // Create series
 function createSeries(field, name) {

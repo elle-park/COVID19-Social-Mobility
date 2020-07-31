@@ -14,6 +14,7 @@ categoryAxis.dataFields.category = "Dates";
 
 // Create value axis
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.title.text = "distance (km)";
 
 // Create Series
 function createSeries(field, name, bullet, cover) {

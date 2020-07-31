@@ -81,7 +81,7 @@ polygonTemplate.events.on("hit", function(ev) {
   if (data.id) {
     info.innerHTML += "Average mobility before 3/16: " + data.mobility_before_distancing + "km"
     + "<br>" + "Average mobility after 3/16: " + data.mobility_after_distancing + "km"
-    + "<br>" + "Median reduction: " + data.median_reduction + "%"
+    + "<br>" + "Median reduction: " + data.median_reduction
     + "<br>" + "Number of Twitter users: " + data.num_users;
   }
   else {

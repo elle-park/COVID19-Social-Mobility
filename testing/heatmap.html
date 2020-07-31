@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/geodata/usaLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="heatmap.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-fixed-top">
+    <a class="navbar-brand" href="https://covid19dataresources.org">COVID-19 Data Resources</a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="analysis.html">Analysis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data.html">Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="relatedproj.html">Related Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div style="margin:1em;"></div>
+  <h1>COVID-19 Social Mobility Results</h1>
+  <p>
+    Twitter Social Mobility Index, a measure of social distancing and travel, is derived from Twitter data.<br>
+    Geolocation data from 50 states, 2 territories, 100 most populated cities in the US were surveyed.
+    We also provide an average outlook at the US as a whole and its 6 regions (Northeast, Midwest, South, Central, West, Caribbean).
+  </p>
+
+  <div id="heatchartdiv" style="height:430px;"></div>
+  <div style="margin:5em;"></div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="footer-img row">
+        <a href="mailto:mdredze@cs.jhu.edu">
+          <img border="0" alt="Email" src="./style/email.png" width="50" height="50">
+          <a href="https://www.twitter.com/mdredze">
+            <img border="0" alt="Twitter" src="./style/twitter.png" width="50" height="50">
+            <a href="http://www.socialmediaforpublichealth.org/covid-19/">
+              <img border="0" alt="Website" src="./style/website.png" width="50" height="50">
+      </div>
+    </div>
+    <div class="footer-copyright text-center">© 2020 Copyright: covid19dataresources.org</div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="heatmap.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWc5f7bo70Fo1Oiw-JdUgzoxXPqbReWeY&callback=initMap"></script>
+</body>
+</html>

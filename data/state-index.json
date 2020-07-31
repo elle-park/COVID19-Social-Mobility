@@ -1,0 +1,487 @@
+[{
+  "id": "US-AK",
+  "mobility_before_distancing": 108.5217839275,
+  "mobility_after_distancing": 30.0460946471,
+  "value": "72.31%",
+  "median_reduction": "98.22%",
+  "median_seasonal_reduction": "70.17%",
+  "num_users": 5382,
+  "num_records": 666915
+}, {
+  "id": "US-AL",
+  "mobility_before_distancing": 47.9523289494,
+  "mobility_after_distancing": 27.9705785549,
+  "value": "41.67%",
+  "median_reduction": "65.77%",
+  "median_seasonal_reduction": "59.52%",
+  "num_users": 41366,
+  "num_records": 6225403
+}, {
+  "id": "US-AR",
+  "mobility_before_distancing": 50.7480082694,
+  "mobility_after_distancing": 26.2769174349,
+  "value": "48.22%",
+  "median_reduction": "73.50%",
+  "median_seasonal_reduction": "64.62%",
+  "num_users": 21240,
+  "num_records": 2758407
+}, {
+  "id": "US-AZ",
+  "mobility_before_distancing": 63.1681422816,
+  "mobility_after_distancing": 27.1707648458,
+  "value": "56.99%",
+  "median_reduction": "85.18%",
+  "median_seasonal_reduction": "76.11%",
+  "num_users": 71585,
+  "num_records": 9297974
+}, {
+  "id": "US-CA",
+  "mobility_before_distancing": 78.5683281571,
+  "mobility_after_distancing": 34.1431483241,
+  "value": "56.54%",
+  "median_reduction": "88.82%",
+  "median_seasonal_reduction": "80.81%",
+  "num_users": 506234,
+  "num_records": 69487479
+}, {
+  "id": "US-CO",
+  "mobility_before_distancing": 72.1523877554,
+  "mobility_after_distancing": 28.6186202039,
+  "value": "60.34%",
+  "median_reduction": "90.82%",
+  "median_seasonal_reduction": "81.95%",
+  "num_users": 50702,
+  "num_records": 6111502
+}, {
+  "id": "US-CT",
+  "mobility_before_distancing": 45.7429342808,
+  "mobility_after_distancing": 16.6777209922,
+  "value": "63.54%",
+  "median_reduction": "89.77%",
+  "median_seasonal_reduction": "80.76%",
+  "num_users": 27467,
+  "num_records": 4002009
+}, {
+  "id": "US-DC",
+  "mobility_before_distancing": 78.8967163352,
+  "mobility_after_distancing": 24.4214081753,
+  "value": "69.05%",
+  "median_reduction": "97.94%",
+  "median_seasonal_reduction": "91.07%",
+  "num_users": 30139,
+  "num_records": 4582237
+}, {
+  "id": "US-DE",
+  "mobility_before_distancing": 44.0075110494,
+  "mobility_after_distancing": 18.4007294243,
+  "value": "58.19%",
+  "median_reduction": "82.88%",
+  "median_seasonal_reduction": "75.05%",
+  "num_users": 8283,
+  "num_records": 1450996
+}, {
+  "id": "US-FL",
+  "mobility_before_distancing": 77.1063855988,
+  "mobility_after_distancing": 37.6159530241,
+  "value": "51.22%",
+  "median_reduction": "78.90%",
+  "median_seasonal_reduction": "70.35%",
+  "num_users": 229306,
+  "num_records": 30613299
+}, {
+  "id": "US-GA",
+  "mobility_before_distancing": 65.6150789377,
+  "mobility_after_distancing": 33.1445514302,
+  "value": "49.49%",
+  "median_reduction": "67.46%",
+  "median_seasonal_reduction": "65.23%",
+  "num_users": 122932,
+  "num_records": 21014273
+}, {
+  "id": "US-HI",
+  "mobility_before_distancing": 146.7882450143,
+  "mobility_after_distancing": 68.1592213948,
+  "value": "53.57%",
+  "median_reduction": "92.40%",
+  "median_seasonal_reduction": "79.97%",
+  "num_users": 21034,
+  "num_records": 1934341
+}, {
+  "id": "US-IA",
+  "mobility_before_distancing": 50.1830744195,
+  "mobility_after_distancing": 22.6398378414,
+  "value": "54.89%",
+  "median_reduction": "84.31%",
+  "median_seasonal_reduction": "75.82%",
+  "num_users": 26912,
+  "num_records": 2830285
+}, {
+  "id": "US-ID",
+  "mobility_before_distancing": 71.4648853549,
+  "mobility_after_distancing": 37.5993013339,
+  "value": "47.39%",
+  "median_reduction": "75.26%",
+  "median_seasonal_reduction": "67.63%",
+  "num_users": 9553,
+  "num_records": 1121973
+}, {
+  "id": "US-IL",
+  "mobility_before_distancing": 55.5475518306,
+  "mobility_after_distancing": 22.5243302179,
+  "value": "59.45%",
+  "median_reduction": "92.28%",
+  "median_seasonal_reduction": "82.56%",
+  "num_users": 121931,
+  "num_records": 15742982
+}, {
+  "id": "US-IN",
+  "mobility_before_distancing": 46.1937482098,
+  "mobility_after_distancing": 21.3934042574,
+  "value": "53.69%",
+  "median_reduction": "85.11%",
+  "median_seasonal_reduction": "79.39%",
+  "num_users": 63982,
+  "num_records": 7674299
+}, {
+  "id": "US-KS",
+  "mobility_before_distancing": 65.1638620821,
+  "mobility_after_distancing": 30.5748636639,
+  "value": "53.08%",
+  "median_reduction": "81.36%",
+  "median_seasonal_reduction": "71.19%",
+  "num_users": 29198,
+  "num_records": 2997597
+}, {
+  "id": "US-KY",
+  "mobility_before_distancing": 44.6956008482,
+  "mobility_after_distancing": 20.7541682818,
+  "value": "53.57%",
+  "median_reduction": "80.95%",
+  "median_seasonal_reduction": "72.42%",
+  "num_users": 39085,
+  "num_records": 4641009
+}, {
+  "id": "US-LA",
+  "mobility_before_distancing": 46.1499681685,
+  "mobility_after_distancing": 25.8202049578,
+  "value": "44.05%",
+  "median_reduction": "69.52%",
+  "median_seasonal_reduction": "62.03%",
+  "num_users": 55644,
+  "num_records": 11430040
+}, {
+  "id": "US-MA",
+  "mobility_before_distancing": 58.4430340816,
+  "mobility_after_distancing": 19.3536077022,
+  "value": "66.88%",
+  "median_reduction": "93.67%",
+  "median_seasonal_reduction": "84.10%",
+  "num_users": 69038,
+  "num_records": 8790377
+}, {
+  "id": "US-MD",
+  "mobility_before_distancing": 46.4555429835,
+  "mobility_after_distancing": 17.7565312154,
+  "value": "61.78%",
+  "median_reduction": "86.94%",
+  "median_seasonal_reduction": "80.66%",
+  "num_users": 64996,
+  "num_records": 10550187
+}, {
+  "id": "US-ME",
+  "mobility_before_distancing": 59.2606179097,
+  "mobility_after_distancing": 25.4477518687,
+  "value": "57.06%",
+  "median_reduction": "83.82%",
+  "median_seasonal_reduction": "74.46%",
+  "num_users": 7501,
+  "num_records": 992195
+}, {
+  "id": "US-MI",
+  "mobility_before_distancing": 56.3608987262,
+  "mobility_after_distancing": 26.9513496367,
+  "value": "52.18%",
+  "median_reduction": "86.18%",
+  "median_seasonal_reduction": "77.32%",
+  "num_users": 78043,
+  "num_records": 9999782
+}, {
+  "id": "US-MN",
+  "mobility_before_distancing": 63.9421013077,
+  "mobility_after_distancing": 22.9781257884,
+  "value": "64.06%",
+  "median_reduction": "90.67%",
+  "median_seasonal_reduction": "82.20%",
+  "num_users": 43574,
+  "num_records": 4876664
+}, {
+  "id": "US-MO",
+  "mobility_before_distancing": 52.493261901,
+  "mobility_after_distancing": 23.7638880403,
+  "value": "54.73%",
+  "median_reduction": "85.22%",
+  "median_seasonal_reduction": "78.59%",
+  "num_users": 50725,
+  "num_records": 6163611
+}, {
+  "id": "US-MS",
+  "mobility_before_distancing": 50.7944447074,
+  "mobility_after_distancing": 30.5381718443,
+  "value": "39.88%",
+  "median_reduction": "62.20%",
+  "median_seasonal_reduction": "58.73%",
+  "num_users": 23026,
+  "num_records": 3762230
+}, {
+  "id": "US-MT",
+  "mobility_before_distancing": 69.8508623484,
+  "mobility_after_distancing": 40.429747513,
+  "value": "42.12%",
+  "median_reduction": "74.45%",
+  "median_seasonal_reduction": "55.87%",
+  "num_users": 5158,
+  "num_records": 548410
+}, {
+  "id": "US-NC",
+  "mobility_before_distancing": 52.2923069143,
+  "mobility_after_distancing": 24.4798519072,
+  "value": "53.19%",
+  "median_reduction": "80.14%",
+  "median_seasonal_reduction": "71.74%",
+  "num_users": 97457,
+  "num_records": 13998838
+}, {
+  "id": "US-ND",
+  "mobility_before_distancing": 65.1766116351,
+  "mobility_after_distancing": 29.4024621415,
+  "value": "54.89%",
+  "median_reduction": "87.51%",
+  "median_seasonal_reduction": "79.03%",
+  "num_users": 5423,
+  "num_records": 502904
+}, {
+  "id": "US-NE",
+  "mobility_before_distancing": 55.1818670763,
+  "mobility_after_distancing": 26.90172828,
+  "value": "51.25%",
+  "median_reduction": "88.85%",
+  "median_seasonal_reduction": "73.32%",
+  "num_users": 19501,
+  "num_records": 1857409
+}, {
+  "id": "US-NH",
+  "mobility_before_distancing": 54.5175149975,
+  "mobility_after_distancing": 21.607137285,
+  "value": "60.37%",
+  "median_reduction": "86.92%",
+  "median_seasonal_reduction": "74.46%",
+  "num_users": 8722,
+  "num_records": 1051802
+}, {
+  "id": "US-NJ",
+  "mobility_before_distancing": 48.9442667284,
+  "mobility_after_distancing": 17.7516761461,
+  "value": "63.73%",
+  "median_reduction": "90.69%",
+  "median_seasonal_reduction": "83.70%",
+  "num_users": 79851,
+  "num_records": 10864982
+}, {
+  "id": "US-NM",
+  "mobility_before_distancing": 58.1489181141,
+  "mobility_after_distancing": 27.9289466495,
+  "value": "51.97%",
+  "median_reduction": "79.95%",
+  "median_seasonal_reduction": "65.68%",
+  "num_users": 14301,
+  "num_records": 1876152
+}, {
+  "id": "US-NV",
+  "mobility_before_distancing": 80.5478456772,
+  "mobility_after_distancing": 40.4387967802,
+  "value": "49.80%",
+  "median_reduction": "80.38%",
+  "median_seasonal_reduction": "71.41%",
+  "num_users": 48811,
+  "num_records": 6648869
+}, {
+  "id": "US-NY",
+  "mobility_before_distancing": 70.6871040825,
+  "mobility_after_distancing": 28.1883102041,
+  "value": "60.12%",
+  "median_reduction": "93.33%",
+  "median_seasonal_reduction": "84.18%",
+  "num_users": 235203,
+  "num_records": 34651600
+}, {
+  "id": "US-OH",
+  "mobility_before_distancing": 44.8482529982,
+  "mobility_after_distancing": 19.6771204318,
+  "value": "56.13%",
+  "median_reduction": "82.79%",
+  "median_seasonal_reduction": "74.10%",
+  "num_users": 119691,
+  "num_records": 15969023
+}, {
+  "id": "US-OK",
+  "mobility_before_distancing": 52.2858771112,
+  "mobility_after_distancing": 29.4821770192,
+  "value": "43.61%",
+  "median_reduction": "70.93%",
+  "median_seasonal_reduction": "62.71%",
+  "num_users": 36106,
+  "num_records": 4341542
+}, {
+  "id": "US-OR",
+  "mobility_before_distancing": 70.3893873883,
+  "mobility_after_distancing": 28.9027708062,
+  "value": "58.94%",
+  "median_reduction": "90.57%",
+  "median_seasonal_reduction": "81.36%",
+  "num_users": 35859,
+  "num_records": 5302684
+}, {
+  "id": "US-PA",
+  "mobility_before_distancing": 54.233360621,
+  "mobility_after_distancing": 24.130122755,
+  "value": "55.51%",
+  "median_reduction": "86.01%",
+  "median_seasonal_reduction": "76.77%",
+  "num_users": 110161,
+  "num_records": 15969030
+}, {
+  "id": "US-PR",
+  "mobility_before_distancing": 46.3523625066,
+  "mobility_after_distancing": 16.3334619803,
+  "value": "64.76%",
+  "median_reduction": "90.85%",
+  "median_seasonal_reduction": "81.42%",
+  "num_users": 7036,
+  "num_records": 1005696
+}, {
+  "id": "US-RI",
+  "mobility_before_distancing": 47.11663291,
+  "mobility_after_distancing": 14.2162981086,
+  "value": "69.83%",
+  "median_reduction": "91.09%",
+  "median_seasonal_reduction": "82.46%",
+  "num_users": 9832,
+  "num_records": 1357458
+}, {
+  "id": "US-SC",
+  "mobility_before_distancing": 47.9379514383,
+  "mobility_after_distancing": 24.3845015876,
+  "value": "49.13%",
+  "median_reduction": "72.54%",
+  "median_seasonal_reduction": "64.07%",
+  "num_users": 41800,
+  "num_records": 5746903
+}, {
+  "id": "US-SD",
+  "mobility_before_distancing": 69.4815071152,
+  "mobility_after_distancing": 38.7923936402,
+  "value": "44.17%",
+  "median_reduction": "77.94%",
+  "median_seasonal_reduction": "66.33%",
+  "num_users": 5955,
+  "num_records": 588474
+}, {
+  "id": "US-TN",
+  "mobility_before_distancing": 56.6323622147,
+  "mobility_after_distancing": 27.3566269508,
+  "value": "51.69%",
+  "median_reduction": "79.67%",
+  "median_seasonal_reduction": "69.38%",
+  "num_users": 70695,
+  "num_records": 9469826
+}, {
+  "id": "US-TX",
+  "mobility_before_distancing": 73.4140880888,
+  "mobility_after_distancing": 34.480681629,
+  "value": "53.03%",
+  "median_reduction": "77.93%",
+  "median_seasonal_reduction": "69.63%",
+  "num_users": 393531,
+  "num_records": 56842472
+}, {
+  "id": "US-UT",
+  "mobility_before_distancing": 69.0235704662,
+  "mobility_after_distancing": 28.4898312738,
+  "value": "58.72%",
+  "median_reduction": "84.14%",
+  "median_seasonal_reduction": "81.20%",
+  "num_users": 23322,
+  "num_records": 2647078
+}, {
+  "id": "US-VA",
+  "mobility_before_distancing": 57.525064871,
+  "mobility_after_distancing": 25.478193939,
+  "value": "55.71%",
+  "median_reduction": "84.38%",
+  "median_seasonal_reduction": "77.52%",
+  "num_users": 82116,
+  "num_records": 12235941
+}, {
+  "id": "US-VI",
+  "mobility_before_distancing": 135.2584294027,
+  "mobility_after_distancing": 49.5328713166,
+  "value": "63.38%",
+  "median_reduction": "96.28%",
+  "median_seasonal_reduction": "94.19%",
+  "num_users": 666,
+  "num_records": 75455
+}, {
+  "id": "US-VT",
+  "mobility_before_distancing": 57.4280490457,
+  "mobility_after_distancing": 26.3753657808,
+  "value": "54.07%",
+  "median_reduction": "86.93%",
+  "median_seasonal_reduction": "79.94%",
+  "num_users": 3819,
+  "num_records": 458258
+}, {
+  "id": "US-WA",
+  "mobility_before_distancing": 75.3679374529,
+  "mobility_after_distancing": 24.011298913,
+  "value": "68.14%",
+  "median_reduction": "93.59%",
+  "median_seasonal_reduction": "89.85%",
+  "num_users": 65868,
+  "num_records": 8653931
+}, {
+  "id": "US-WI",
+  "mobility_before_distancing": 56.297098501,
+  "mobility_after_distancing": 23.93044334,
+  "value": "57.49%",
+  "median_reduction": "87.30%",
+  "median_seasonal_reduction": "80.15%",
+  "num_users": 34817,
+  "num_records": 4292570
+}, {
+  "id": "US-WV",
+  "mobility_before_distancing": 45.9720484328,
+  "mobility_after_distancing": 25.0106600625,
+  "value": "45.60%",
+  "median_reduction": "67.48%",
+  "median_seasonal_reduction": "62.39%",
+  "num_users": 13571,
+  "num_records": 1486158
+}, {
+  "id": "US-WY",
+  "mobility_before_distancing": 71.4049787337,
+  "mobility_after_distancing": 45.5701715714,
+  "value": "36.18%",
+  "median_reduction": "64.11%",
+  "median_seasonal_reduction": "63.74%",
+  "num_users": 3029,
+  "num_records": 357896
+}, {
+  "id": "US-United States",
+  "mobility_before_distancing": 65.5800997491,
+  "mobility_after_distancing": 29.5310475452,
+  "value": "54.97%",
+  "median_reduction": "84.95%",
+  "median_seasonal_reduction": "76.17%",
+  "num_users": 3898305,
+  "num_records": 517352688
+}]

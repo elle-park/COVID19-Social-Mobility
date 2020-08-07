@@ -3,7 +3,7 @@ import json
 import numpy as np
 import pandas as pd
 
-data = pd.read_csv("index-state.csv")
+data = pd.read_csv("index_state_latest.csv")
 
 df = pd.DataFrame(data)
 
